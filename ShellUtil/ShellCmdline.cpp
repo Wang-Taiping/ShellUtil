@@ -41,6 +41,7 @@ const char** ShellSplitCmdlineA(const char* Cmdline)
 			else if (k < MAX_STRING_ELEM - 1) {
 				strtmp[k] = Cmdline[i];
 				k++;
+				bs = false;
 			}
 			else goto fail;
 		}
@@ -49,6 +50,7 @@ const char** ShellSplitCmdlineA(const char* Cmdline)
 				if (k < MAX_STRING_ELEM - 1) {
 					strtmp[k] = Cmdline[i];
 					k++;
+					bs = false;
 				}
 				else goto fail;
 			}
@@ -173,6 +175,7 @@ const wchar_t** ShellSplitCmdlineW(const wchar_t* Cmdline)
 			else if (k < MAX_STRING_ELEM - 1) {
 				strtmp[k] = Cmdline[i];
 				k++;
+				bs = false;
 			}
 			else goto fail;
 		}
@@ -181,6 +184,7 @@ const wchar_t** ShellSplitCmdlineW(const wchar_t* Cmdline)
 				if (k < MAX_STRING_ELEM - 1) {
 					strtmp[k] = Cmdline[i];
 					k++;
+					bs = false;
 				}
 				else goto fail;
 			}
