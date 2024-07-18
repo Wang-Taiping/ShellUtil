@@ -134,7 +134,7 @@ void ShellReleaseCmdlineA(const char** Cmdline)
 	delete[] arrtmp;
 }
 
-const wchar_t** ShellSplitCmdlineW(const char* Cmdline)
+const wchar_t** ShellSplitCmdlineW(const wchar_t* Cmdline)
 {
 	if (!Cmdline) return nullptr;
 	wchar_t** arrtmp = new wchar_t* [MAX_ARRAY_ELEM];

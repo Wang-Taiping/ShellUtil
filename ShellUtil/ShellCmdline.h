@@ -10,7 +10,7 @@ extern "C" {
 #endif // __cplusplus
 	SHELL_EXPORT const char** ShellSplitCmdlineA(const char* Cmdline);
 	SHELL_EXPORT void ShellReleaseCmdlineA(const char** Cmdline);
-	SHELL_EXPORT const wchar_t** ShellSplitCmdlineW(const char* Cmdline);
+	SHELL_EXPORT const wchar_t** ShellSplitCmdlineW(const wchar_t* Cmdline);
 	SHELL_EXPORT void ShellReleaseCmdlineW(const wchar_t** Cmdline);
 #ifdef __cplusplus
 }
