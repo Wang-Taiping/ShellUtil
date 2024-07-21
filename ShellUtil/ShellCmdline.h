@@ -8,10 +8,10 @@
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-	SHELL_EXPORT const char** ShellSplitCmdlineA(const char* Cmdline);
-	SHELL_EXPORT void ShellReleaseCmdlineA(const char** Cmdline);
-	SHELL_EXPORT const wchar_t** ShellSplitCmdlineW(const wchar_t* Cmdline);
-	SHELL_EXPORT void ShellReleaseCmdlineW(const wchar_t** Cmdline);
+	SHELL_EXPORT const char** SHELL_API ShellSplitCmdlineA(const char* Cmdline);
+	SHELL_EXPORT void SHELL_API ShellReleaseCmdlineA(const char** Cmdline);
+	SHELL_EXPORT const wchar_t** SHELL_API ShellSplitCmdlineW(const wchar_t* Cmdline);
+	SHELL_EXPORT void SHELL_API ShellReleaseCmdlineW(const wchar_t** Cmdline);
 #ifdef __cplusplus
 }
 #endif // __cplusplus

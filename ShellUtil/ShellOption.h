@@ -19,8 +19,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif // __cplusplus
-	TYPEHANDLE(ShellOptionStoreA);
-	TYPEHANDLE(ShellOptionStoreW);
+	SHELL_TYPENAME(ShellOptionStoreA);
+	SHELL_TYPENAME(ShellOptionStoreW);
 	typedef struct ShellOptionRuleA {
 		const char* Name;
 		uint32_t Args;
@@ -32,16 +32,16 @@ extern "C" {
 		uint32_t Identifier;
 	} OptRuleW;
 
-	SHELL_EXPORT ShellOptionStoreA ShellCreateOptionStoreA(int argc, const char** argv);
-	SHELL_EXPORT ShellOptionStoreW ShellCreateOptionStoreW(int argc, const wchar_t** argv);
-	SHELL_EXPORT uint32_t ShellAnalyzeOptionStoreA(ShellOptionStoreA OptionStore, ShellOptionRuleA* Rules);
-	SHELL_EXPORT uint32_t ShellAnalyzeOptionStoreW(ShellOptionStoreW OptionStore, ShellOptionRuleW* Rules);
-	SHELL_EXPORT const char* ShellGetKeyNameA(ShellOptionStoreA OptionStore);
-	SHELL_EXPORT const wchar_t* ShellGetKeyNameW(ShellOptionStoreW OptionStore);
-	SHELL_EXPORT const char* ShellGetResultA(ShellOptionStoreA OptionStore, uint32_t Index);
-	SHELL_EXPORT const wchar_t* ShellGetResultW(ShellOptionStoreW OptionStore, uint32_t Index);
-	SHELL_EXPORT void ShellReleaseOptionStoreA(ShellOptionStoreA OptionStore);
-	SHELL_EXPORT void ShellReleaseOptionStoreW(ShellOptionStoreW OptionStore);
+	SHELL_EXPORT ShellOptionStoreA SHELL_API ShellCreateOptionStoreA(int argc, const char** argv);
+	SHELL_EXPORT ShellOptionStoreW SHELL_API ShellCreateOptionStoreW(int argc, const wchar_t** argv);
+	SHELL_EXPORT uint32_t SHELL_API ShellAnalyzeOptionStoreA(ShellOptionStoreA OptionStore, ShellOptionRuleA* Rules);
+	SHELL_EXPORT uint32_t SHELL_API ShellAnalyzeOptionStoreW(ShellOptionStoreW OptionStore, ShellOptionRuleW* Rules);
+	SHELL_EXPORT const char* SHELL_API ShellGetKeyNameA(ShellOptionStoreA OptionStore);
+	SHELL_EXPORT const wchar_t* SHELL_API ShellGetKeyNameW(ShellOptionStoreW OptionStore);
+	SHELL_EXPORT const char* SHELL_API ShellGetResultA(ShellOptionStoreA OptionStore, uint32_t Index);
+	SHELL_EXPORT const wchar_t* SHELL_API ShellGetResultW(ShellOptionStoreW OptionStore, uint32_t Index);
+	SHELL_EXPORT void SHELL_API ShellReleaseOptionStoreA(ShellOptionStoreA OptionStore);
+	SHELL_EXPORT void SHELL_API ShellReleaseOptionStoreW(ShellOptionStoreW OptionStore);
 #ifdef __cplusplus
 }
 #endif // __cplusplus
